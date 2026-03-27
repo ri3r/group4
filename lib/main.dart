@@ -39,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             const SizedBox(height: 32),
 
-            // Benutzername
+            // Username
             const TextField(
               decoration: InputDecoration(
                 labelText: "Username",
@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             const SizedBox(height: 16),
 
-            // Passwort
+            // Password
             const TextField(
               obscureText: true,
               decoration: InputDecoration(
