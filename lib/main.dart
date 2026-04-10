@@ -92,7 +92,7 @@ class _TeamScreenState extends State<TeamScreen> {
         name: "Gino Chianese",
         studentId: "5024401",
         email: "Gino.Chianese@study.thws.de",
-        imageUrl: "https://randomuser.me/api/portraits/men/5.jpg",
+        imageUrl: "lib/assets/images/gino.png",
         accentColor: Colors.green,
       ),
     ];
@@ -246,6 +246,36 @@ class TeamCard extends StatelessWidget {
 
   const TeamCard({super.key, required this.member});
 
+  Widget _buildMemberImage(String imageUrl) {
+    if (imageUrl.startsWith('http')) {
+      return Image.network(
+        imageUrl,
+        width: 90,
+        height: 90,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => Container(
+          width: 90,
+          height: 90,
+          color: Colors.grey[300],
+          child: const Icon(Icons.person),
+        ),
+      );
+    } else {
+      return Image.asset(
+        imageUrl,
+        width: 90,
+        height: 90,
+        fit: BoxFit.cover,
+        errorBuilder: (_, __, ___) => Container(
+          width: 90,
+          height: 90,
+          color: Colors.grey[300],
+          child: const Icon(Icons.person),
+        ),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -293,18 +323,7 @@ class TeamCard extends StatelessWidget {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
-                      child: Image.network(
-                        member.imageUrl,
-                        width: 90,
-                        height: 90,
-                        fit: BoxFit.cover,
-                        errorBuilder: (_, __, ___) => Container(
-                          width: 90,
-                          height: 90,
-                          color: Colors.grey[300],
-                          child: const Icon(Icons.person),
-                        ),
-                      ),
+                     child: _buildMemberImage(member.imageUrl),
                     ),
                   ),
                 ),
