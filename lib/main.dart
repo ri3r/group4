@@ -78,7 +78,7 @@ class _TeamScreenState extends State<TeamScreen> {
         name: "Elisa Holzheid",
         studentId: "6123103",
         email: "Elisa.holzheid@study.thws.de",
-        imageUrl: "https://randomuser.me/api/portraits/women/1.jpg",
+        imageUrl: "lib/assets/images/elisa.png",
         accentColor: Colors.pink,
       ),
       TeamMember(
@@ -298,7 +298,6 @@ class TeamCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Akzent-Header mit Bild
             Stack(
               clipBehavior: Clip.none,
               children: [
