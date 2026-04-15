@@ -25,6 +25,7 @@ class TeamMember {
   final String studentId;
   final String email;
   final String imageUrl;
+  final String aboutMe;
   final Color accentColor;
 
   TeamMember({
@@ -32,6 +33,7 @@ class TeamMember {
     required this.studentId,
     required this.email,
     required this.imageUrl,
+    required this.aboutMe,
     required this.accentColor,
   });
 }
@@ -58,13 +60,16 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "2304466",
         email: "shahin.firuzi@tuni.fi",
         imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+        aboutMe: "",
         accentColor: Colors.indigo,
       ),
       TeamMember(
         name: "Chen Chen",
         studentId: "2304457",
         email: "chen.chen@tuni.fi",
-        imageUrl: "https://randomuser.me/api/portraits/men/2.jpg",
+        imageUrl: "lib/assets/images/chen.png",
+        aboutMe:
+            "Hello, I am an international student at TAMK, majoring in software engineering. I like music, cats, and warm sunny afternoons.",
         accentColor: Colors.teal,
       ),
       TeamMember(
@@ -72,6 +77,7 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "2600143",
         email: "daniel.zetovics@tuni.fi",
         imageUrl: "https://randomuser.me/api/portraits/men/3.jpg",
+        aboutMe: "",
         accentColor: Colors.deepPurple,
       ),
       TeamMember(
@@ -79,6 +85,7 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "6123103",
         email: "Elisa.holzheid@study.thws.de",
         imageUrl: "lib/assets/images/elisa.png",
+        aboutMe: "",
         accentColor: Colors.pink,
       ),
       TeamMember(
@@ -86,6 +93,7 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "5121046",
         email: "edin.putzu@study.thws.de",
         imageUrl: "https://randomuser.me/api/portraits/men/4.jpg",
+        aboutMe: "",
         accentColor: Colors.blue,
       ),
       TeamMember(
@@ -93,6 +101,7 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "5024401",
         email: "Gino.Chianese@study.thws.de",
         imageUrl: "lib/assets/images/gino.png",
+        aboutMe: "",
         accentColor: Colors.green,
       ),
     ];
@@ -232,12 +241,12 @@ class _TeamScreenState extends State<TeamScreen> {
                     ),
                   ],
                 ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
-            );
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -322,7 +331,7 @@ class TeamCard extends StatelessWidget {
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(16),
-                     child: _buildMemberImage(member.imageUrl),
+                      child: _buildMemberImage(member.imageUrl),
                     ),
                   ),
                 ),
@@ -360,11 +369,13 @@ class TeamCard extends StatelessWidget {
                         color: Color(0xFF64748B),
                       ),
                     ),
-                    const Spacer(),
-                    Row(
-                      children: [
-                        _socialIcon(Icons.email),
-                      ],
+                    const SizedBox(height: 6),
+                    Text(
+                      member.aboutMe,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        color: Color(0xFF64748B),
+                      ),
                     ),
                   ],
                 ),
