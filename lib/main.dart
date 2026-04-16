@@ -102,7 +102,7 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "5024401",
         email: "Gino.Chianese@study.thws.de",
         imageUrl: "lib/assets/images/gino.png",
-        aboutMe: "",
+        aboutMe: "Hello, I am a student at THWS. I enjoy sports and reading.",
         accentColor: Colors.green,
       ),
     ];
