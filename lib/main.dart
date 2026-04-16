@@ -86,7 +86,8 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "6123103",
         email: "Elisa.holzheid@study.thws.de",
         imageUrl: "lib/assets/images/elisa.png",
-        aboutMe: "Hi, I am Elisa. I am a student at THWS, my major is E-Commerce. I like music, dogs and coffee.",
+        aboutMe:
+            "Hi, I am Elisa. I am a student at THWS, my major is E-Commerce. I like music, dogs and coffee.",
         accentColor: Colors.pink,
       ),
       TeamMember(
@@ -94,7 +95,8 @@ class _TeamScreenState extends State<TeamScreen> {
         studentId: "5121046",
         email: "edin.putzu@study.thws.de",
         imageUrl: "https://randomuser.me/api/portraits/men/4.jpg",
-        aboutMe: "",
+        aboutMe:
+            "Hey, I'm Edin, majoring in Computer Science at THWS. I like hanging out with friends and learning new things.",
         accentColor: Colors.blue,
       ),
       TeamMember(
@@ -139,12 +141,6 @@ class _TeamScreenState extends State<TeamScreen> {
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.info_outline, size: 22, color: Colors.grey),
-            onPressed: () {},
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -222,26 +218,6 @@ class _TeamScreenState extends State<TeamScreen> {
                     }),
                   ),
                 ],
-              ),
-            ),
-
-            // Call to Action (CTA)
-            Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Container(
-                padding: const EdgeInsets.all(24),
-                decoration: BoxDecoration(
-                  color: Colors.indigo[600],
-                  borderRadius: BorderRadius.circular(24),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.indigo.withValues(alpha: 76),
-
-                      blurRadius: 15,
-                      offset: const Offset(0, 8),
-                    ),
-                  ],
-                ),
               ),
             ),
           ],
