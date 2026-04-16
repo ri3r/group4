@@ -59,8 +59,9 @@ class _TeamScreenState extends State<TeamScreen> {
         name: "Shahin Firuzi",
         studentId: "2304466",
         email: "shahin.firuzi@tuni.fi",
-        imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
-        aboutMe: "",
+        imageUrl: "lib/assets/images/shahin.png",
+        aboutMe:
+            "Hi everyone, I'm Shahin from TAMK, and my major is Software Engineering. I enjoy thinking, creating, and being close to nature.",
         accentColor: Colors.indigo,
       ),
       TeamMember(
@@ -384,17 +385,6 @@ class TeamCard extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _socialIcon(IconData icon) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF1F5F9),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Icon(icon, size: 18, color: const Color(0xFF475569)),
     );
   }
 }
