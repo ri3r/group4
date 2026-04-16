@@ -1,0 +1,1 @@
+A community-driven platform designed for book lovers to seamlessly exchange, sell, or gift their favorite reads. Our app fosters a sustainable reading culture by connecting local readers and giving pre-owned books a second life.
