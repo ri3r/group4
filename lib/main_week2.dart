@@ -56,24 +56,6 @@ class _TeamScreenState extends State<TeamScreen> {
     super.initState();
     team = [
       TeamMember(
-        name: "Shahin Firuzi",
-        studentId: "2304466",
-        email: "shahin.firuzi@tuni.fi",
-        imageUrl: "lib/assets/images/shahin.png",
-        aboutMe:
-            "Hi everyone, I'm Shahin from TAMK, and my major is Software Engineering. I enjoy thinking, creating, and being close to nature.",
-        accentColor: Colors.indigo,
-      ),
-      TeamMember(
-        name: "Chen Chen",
-        studentId: "2304457",
-        email: "chen.chen@tuni.fi",
-        imageUrl: "lib/assets/images/chen.png",
-        aboutMe:
-            "Hello, I am an international student at TAMK, majoring in software engineering. I like music, cats, and warm sunny afternoons.",
-        accentColor: Colors.teal,
-      ),
-      TeamMember(
         name: "Dániel Zetovics",
         studentId: "2600143",
         email: "daniel.zetovics@tuni.fi",
